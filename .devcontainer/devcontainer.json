@@ -1,0 +1,21 @@
+{
+  "name": "FastAPI 単語帳アプリ開発環境",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": "mkdir -p db && touch db/wordlist.db",
+  "forwardPorts": [8000],
+  "remoteUser": "root"
+}
